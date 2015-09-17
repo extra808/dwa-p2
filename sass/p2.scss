@@ -1,0 +1,17 @@
+// place for custom variables
+@import "bootstrap-variables";
+
+@import "../../bootstrap-sass/assets/stylesheets/bootstrap"; 
+
+// custom version of optional class, not sure where in import order this should go
+@import "customTheme";
+
+.content-nav {
+	@extend .col-md-4;
+	@extend .col-md-push-8;
+	}
+
+.content-prose {
+	@extend .col-md-8;
+	@extend .col-md-pull-4;
+	}
