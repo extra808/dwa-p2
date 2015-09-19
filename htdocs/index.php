@@ -1,4 +1,7 @@
 <?php
+// set default character set
+ini_set('default_charset', 'UTF-8');
+
 require_once ("../php/logic.php");
 
 // get last Modified date of this file
@@ -38,7 +41,7 @@ $lastMod = date ("F d Y", getlastmod());
         
 		</div> <!-- /content-nav -->
 		<div class="content-prose">
-        <?= $randomWord ?>
+        <?= $passphrase ?>
 		</div> <!-- /content-prose -->
       </div>
 
