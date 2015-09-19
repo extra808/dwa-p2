@@ -1,4 +1,6 @@
 <?php
+require_once ("../php/logic.php");
+
 // get last Modified date of this file
 $lastMod = date ("F d Y", getlastmod());
 ?>
@@ -36,7 +38,7 @@ $lastMod = date ("F d Y", getlastmod());
         
 		</div> <!-- /content-nav -->
 		<div class="content-prose">
-
+        <?= $randomWord ?>
 		</div> <!-- /content-prose -->
       </div>
 
