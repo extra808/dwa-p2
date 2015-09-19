@@ -39,4 +39,12 @@ function pass_phrase(&$wordArray, $wordCount) {
     return $phrase;
 }
 
+/**
+ * echos string with characters encoded for HTML
+ *
+ * @param string hscString   to encode
+ */
+function hsc($hscString) {
+    echo htmlspecialchars($hscString, ENT_HTML5) ."\n";
+}
 ?>
