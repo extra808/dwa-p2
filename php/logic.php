@@ -66,8 +66,19 @@ function pass_phrase($wordCount, $symbolCount) {
         if ($i != 0) $phrase .= "-";
         
         $phrase .= random_word();
-        }
         
+        // add symbol if all haven't been added
+        if ($symbolCount) {
+            $phrase .= random_symbol();
+            $symbolCount--;
+            }
+        }
+
+    // append any remaining symbols
+    for ($i = 0; $i < $symbolCount; $i++) {
+        $phrase .= random_symbol();
+        }
+
     return $phrase;
 }
 
