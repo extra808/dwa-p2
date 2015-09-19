@@ -41,6 +41,8 @@ function pass_phrase(&$wordArray, $wordCount) {
 
 /**
  * echos string with characters encoded for HTML
+ * 
+ * Use in place of <code>echo</code> and <code>print</code> in all HTML
  *
  * @param string hscString   to encode
  */
