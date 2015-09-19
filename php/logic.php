@@ -10,6 +10,11 @@
 
 $words = Array("alice", "bob", "curtis");
 
+// symbol character list from
+// http://windows.microsoft.com/en-us/windows-vista/tips-for-creating-a-strong-password
+// \ and ' require escaping
+$symbols = Array('`', '~', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '-', '+', '=', '{', '}', '[', ']', '\\', '|', ':', ';', '"', '\'', '<', '>', ',', '.', '?', '/');
+
 $defaultWordQty = 4;
 $minWordQty = 1;
 $maxWordQty = 9;
@@ -28,6 +33,16 @@ if(isset($_POST['qtySymbols']) && $_POST['qtySymbols'] != "") {
     }
 
 $passphrase = pass_phrase($words, $wordQty);
+
+
+/**
+ * returns random symbol from given array
+ *
+ * @param Array symbolArray   array of symbol characters
+ */
+function random_symbol(&$symbolArray) {
+    return  $symbolArray[rand(0,count($symbolArray)-1 )];
+}
 
 /**
  * returns random word from given array
