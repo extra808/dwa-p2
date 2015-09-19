@@ -48,10 +48,17 @@ $lastMod = date ("F d Y", getlastmod());
 <?php hsc($passphrase); ?>
 		</textarea>
 		</label>
+
         <label>
         <input type="text" name="qtyWords" id="qtyWords">
         Quantity of words to include
         </label>
+
+        <label>
+        <input type="text" name="qtySymbols" id="qtySymbols">
+        Quantity of symbols to include
+        </label>
+
         <input type="submit" value="Generate Password" />
 		</fieldset> <!-- /content-prose -->
 		</form>
