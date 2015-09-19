@@ -40,8 +40,9 @@ $passphrase = pass_phrase($words, $wordQty);
  *
  * @param Array symbolArray   array of symbol characters
  */
-function random_symbol(&$symbolArray) {
-    return  $symbolArray[rand(0,count($symbolArray)-1 )];
+function random_symbol() {
+    global $symbols;
+    return  $symbols[rand(0,count($symbols)-1 )];
 }
 
 /**
@@ -65,7 +66,7 @@ function pass_phrase(&$wordArray, $wordCount) {
         // don't add separator to first word
         if ($i != 0) $phrase .= "-";
         
-        $phrase .= random_word($wordArray) . $i;
+        $phrase .= random_word($wordArray);
         }
         
     return $phrase;
