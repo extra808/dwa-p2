@@ -15,11 +15,17 @@ $minWordQty = 1;
 $maxWordQty = 9;
 $wordQty = $defaultWordQty;
 
+$minSymbolQty = 0;
+$maxSymbolQty = 9;
+$symbolQty = $minSymbolQty;
 
-if(isset($_POST['qtyWords']) ) {
+if(isset($_POST['qtyWords'])  && $_POST['qtyWords'] != "") {
     $wordQty = validate_int_range($_POST['qtyWords'], $minWordQty, $maxWordQty);
     }
 
+if(isset($_POST['qtySymbols']) && $_POST['qtySymbols'] != "") {
+    $symbolQty = validate_int_range($_POST['qtySymbols'], $minSymbolQty, $maxSymbolQty);
+    }
 
 $passphrase = pass_phrase($words, $wordQty);
 
