@@ -41,7 +41,7 @@ $lastMod = date ("F d Y", getlastmod());
         
 		</div> <!-- /content-nav -->
 		<div class="content-prose">
-        <?= $passphrase ?>
+        <?php hsc($passphrase); ?>
 		</div> <!-- /content-prose -->
       </div>
 
