@@ -10,7 +10,34 @@
 
 $words = Array("alice", "bob", "curtis");
 
-$passphrase = pass_phrase($words, 4);
+$defaultWordQty = 4;
+$minWordQty = 1;
+$maxWordQty = 9;
+$wordQty = 1;
+
+
+if(isset($_POST['qtyWords']) ) {
+    // cast input as int
+    $intQtyWords = (int)$_POST['qtyWords'];
+    // set to maximum
+    if ($maxWordQty <= $intQtyWords) {
+        $wordQty = $maxWordQty;
+        }
+    // set to minimum
+    elseif ($minWordQty >= $intQtyWords) {
+        $wordQty = $minWordQty;
+        }
+    // set to input
+    else {
+        $wordQty = $intQtyWords;
+        }
+    }
+else {
+    $wordQty = $defaultWordQty;
+    }
+
+
+$passphrase = pass_phrase($words, $wordQty);
 
 /**
  * returns random word from given array
@@ -33,7 +60,7 @@ function pass_phrase(&$wordArray, $wordCount) {
         // don't add separator to first word
         if ($i != 0) $phrase .= "-";
         
-        $phrase .= random_word($wordArray);
+        $phrase .= random_word($wordArray) . $i;
         }
         
     return $phrase;
