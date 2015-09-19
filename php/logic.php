@@ -13,27 +13,11 @@ $words = Array("alice", "bob", "curtis");
 $defaultWordQty = 4;
 $minWordQty = 1;
 $maxWordQty = 9;
-$wordQty = 1;
+$wordQty = $defaultWordQty;
 
 
 if(isset($_POST['qtyWords']) ) {
-    // cast input as int
-    $intQtyWords = (int)$_POST['qtyWords'];
-    // set to maximum
-    if ($maxWordQty <= $intQtyWords) {
-        $wordQty = $maxWordQty;
-        }
-    // set to minimum
-    elseif ($minWordQty >= $intQtyWords) {
-        $wordQty = $minWordQty;
-        }
-    // set to input
-    else {
-        $wordQty = $intQtyWords;
-        }
-    }
-else {
-    $wordQty = $defaultWordQty;
+    $wordQty = validate_int_range($_POST['qtyWords'], $minWordQty, $maxWordQty);
     }
 
 
@@ -65,6 +49,31 @@ function pass_phrase(&$wordArray, $wordCount) {
         
     return $phrase;
 }
+
+/**
+ * returns random words from given array
+ *
+ * @param Array wordArray   array of strings
+ * @param int   wordCount   quantity of words to return
+ */
+function validate_int_range($input, $min, $max) {
+    // cast input as int
+    $input = (int) $input;
+
+    // set to maximum
+    if ($max <= $input) {
+        return $max;
+        }
+    // set to minimum
+    elseif ($min >= $input) {
+        return $min;
+        }
+    // set to input
+    else {
+        return $input;
+        }
+}
+
 
 /**
  * echos string with characters encoded for HTML
