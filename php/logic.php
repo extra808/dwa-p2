@@ -38,7 +38,6 @@ $passphrase = pass_phrase($words, $wordQty);
 /**
  * returns random symbol from given array
  *
- * @param Array symbolArray   array of symbol characters
  */
 function random_symbol() {
     global $symbols;
@@ -48,9 +47,9 @@ function random_symbol() {
 /**
  * returns random word from given array
  *
- * @param Array wordArray   array of strings
  */
-function random_word(&$wordArray) {
+function random_word() {
+    global $words;
     return  $wordArray[rand(0,count($wordArray)-1 )];
 }
 
