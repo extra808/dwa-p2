@@ -38,11 +38,19 @@ $lastMod = date ("F d Y", getlastmod());
       <!-- Bootstrap two-columns, first column right -->
       <div class="row">
 		<div class="content-nav">
-        
+        Placeholder
 		</div> <!-- /content-nav -->
-		<div class="content-prose">
+		<form action="." method="POST">
+		<input type="hidden" name="secrets" value="shhhhhh">
+		<fieldset class="content-prose">
         <?php hsc($passphrase); ?>
-		</div> <!-- /content-prose -->
+        <label>
+        <input type="text" name="qtyWords" id="qtyWords">
+        Quantity of words to include
+        </label>
+        <input type="submit" value="Generate Password" />
+		</fieldset> <!-- /content-prose -->
+		</form>
       </div>
 
 	<footer class="well well-sm text-right">&copy; Curtis Wilcox <?php echo $lastMod; ?>
