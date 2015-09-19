@@ -32,7 +32,7 @@ if(isset($_POST['qtySymbols']) && $_POST['qtySymbols'] != "") {
     $symbolQty = validate_int_range($_POST['qtySymbols'], $minSymbolQty, $maxSymbolQty);
     }
 
-$passphrase = pass_phrase($words, $wordQty);
+$passphrase = pass_phrase($wordQty, $symbolQty);
 
 
 /**
@@ -50,7 +50,7 @@ function random_symbol() {
  */
 function random_word() {
     global $words;
-    return  $wordArray[rand(0,count($wordArray)-1 )];
+    return  $words[rand(0,count($words)-1 )];
 }
 
 /**
@@ -59,13 +59,13 @@ function random_word() {
  * @param Array wordArray   array of strings
  * @param int   wordCount   quantity of words to return
  */
-function pass_phrase(&$wordArray, $wordCount) {
+function pass_phrase($wordCount, $symbolCount) {
     $phrase = "";
     for ($i = 0; $i < $wordCount; $i++) {
         // don't add separator to first word
         if ($i != 0) $phrase .= "-";
         
-        $phrase .= random_word($wordArray);
+        $phrase .= random_word();
         }
         
     return $phrase;
