@@ -6,6 +6,14 @@
 // custom version of optional class, not sure where in import order this should go
 @import "customTheme";
 
+label, input, textarea {
+    display: block;
+}
+
+textarea {
+    width: 100%;
+}
+
 .content-nav {
 	@extend .col-md-4;
 	@extend .col-md-push-8;
