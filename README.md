@@ -9,6 +9,7 @@
 <https://www.youtube.com/watch?v=dQw4w9WgXcQ>
 
 ## Details for teaching team
+On iOS devices, to copy the passphrase, tap once to automatically select it, tap a second time _on one of the selection handles_
 
 ## Outside code
 * [bootstrap-sass](https://github.com/twbs/bootstrap-sass) Official Sass port of Bootstrap 
