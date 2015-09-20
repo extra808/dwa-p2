@@ -46,8 +46,8 @@ $lastMod = date ("F d Y", getlastmod());
 		<form action="." method="POST">
 		<fieldset class="content-prose">
 		<label>Your generated password 
-
-		<textarea><?php echo hsc($passphrase); ?></textarea>
+        <span class="sr-only">text will automatically be selected</span>
+		<textarea id="passphrase"><?php echo hsc($passphrase); ?></textarea>
 		</label>
 
         <label>
@@ -83,6 +83,8 @@ $lastMod = date ("F d Y", getlastmod());
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script async src="javascripts/ie10-viewport-bug-workaround.js"></script>
+
+    <script async src="javascripts/select-all-on-click.js"></script>
 
 <?php echo microtime(true) - $before ."\n<br>". round(memory_get_peak_usage(true)/1048576,2) ."MB"; ?>
   </body>
