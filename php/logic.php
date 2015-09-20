@@ -7,8 +7,11 @@
  * @logic logic
  */
 
+require_once ("words-no-apostrophes-ascii-only.php");
 
-$words = Array("alice", "bob", "curtis");
+$words = Array("alice", "bob", "curtis", "x", "apple");
+
+$words = &$wordsNoApostrophesAsciiOnly;
 
 // symbol character list from
 // http://windows.microsoft.com/en-us/windows-vista/tips-for-creating-a-strong-password
