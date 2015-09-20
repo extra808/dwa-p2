@@ -15,3 +15,4 @@
 * [Bootstrap Navbar Template](http://getbootstrap.com/examples/navbar/) Example of Bootstrap navbar
 * [Autoprefixer](https://github.com/postcss/autoprefixer) Plugin for [PostCSS](https://github.com/postcss/postcss); adds needed browser prefixes, removes old, prefixes no longer needed
 * [symbol character list source](http://windows.microsoft.com/en-us/windows-vista/tips-for-creating-a-strong-password)
+* [Data form validation](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/Data_form_validation) HTML5 capabilities for form validation feedback

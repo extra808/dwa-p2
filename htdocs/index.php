@@ -52,17 +52,17 @@ $lastMod = date ("F d Y", getlastmod());
 		</label>
 
         <label>
-        <input type="text" name="qtyWords" id="qtyWords" value="<?= $wordQty ?>">
+        <input type="number" min="1" max="9" step="1" pattern="\d+" name="qtyWords" id="qtyWords" value="<?= $wordQty ?>" required>
         Quantity of words to include
         </label>
 
         <label>
-        <input type="text" name="qtyDigits" id="qtyDigits" value="<?= $digitQty ?>">
+        <input type="number" min="0" max="9" step="1" pattern="\d+" name="qtyDigits" id="qtyDigits" value="<?= $digitQty ?>">
         Quantity of numbers to include
         </label>
 
         <label>
-        <input type="text" name="qtySymbols" id="qtySymbols" value="<?= $symbolQty ?>">
+        <input type="number" min="0" max="9" step="1" pattern="\d+" name="qtySymbols" id="qtySymbols" value="<?= $symbolQty ?>">
         Quantity of symbols to include
         </label>
 

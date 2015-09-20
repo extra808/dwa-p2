@@ -1,0 +1,22 @@
+label, input, textarea {
+    display: block;
+}
+
+textarea {
+    font-family: $font-family-monospace;
+    width: 100%;
+}
+
+// visually indicate invalid field entries
+input[type=number] {
+    // necessary for Safari
+    appearance: none;
+
+    &:invalid {
+      box-shadow: 0 0 5px 1px red;
+    }
+
+    &:focus:invalid {
+      outline: none;
+    }
+}

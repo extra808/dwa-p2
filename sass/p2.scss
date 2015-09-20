@@ -6,14 +6,8 @@
 // custom version of optional class, not sure where in import order this should go
 @import "customTheme";
 
-label, input, textarea {
-    display: block;
-}
-
-textarea {
-    font-family: $font-family-monospace;
-    width: 100%;
-}
+// visually indicate invalid field entries
+@import "form-validation";
 
 .content-nav {
 	@extend .col-md-4;
