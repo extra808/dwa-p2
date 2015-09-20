@@ -11,6 +11,7 @@ textarea {
 input[type=number] {
     // necessary for Safari
     appearance: none;
+    width: 4rem;
 
     &:invalid {
       box-shadow: 0 0 5px 1px red;
