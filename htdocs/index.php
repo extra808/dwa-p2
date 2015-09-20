@@ -46,9 +46,8 @@ $lastMod = date ("F d Y", getlastmod());
 		<form action="." method="POST">
 		<fieldset class="content-prose">
 		<label>Your generated password 
-		<textarea readonly>
-<?php hsc($passphrase); ?>
-		</textarea>
+
+		<textarea readonly><?php echo hsc($passphrase); ?></textarea>
 		</label>
 
         <label>

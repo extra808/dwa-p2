@@ -149,6 +149,6 @@ function validate_int_range($input, $min, $max) {
  * @param string hscString   to encode
  */
 function hsc($hscString) {
-    echo htmlspecialchars($hscString, ENT_HTML5) ."\n";
+    return htmlspecialchars($hscString, ENT_HTML5);
 }
 ?>
