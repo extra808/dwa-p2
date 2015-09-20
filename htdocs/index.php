@@ -21,7 +21,7 @@ $lastMod = date ("F d Y", getlastmod());
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Password Generator</title>
+    <title>Curtis's Passphrase Generator</title>
 
     <link href="css/p2.css" rel="stylesheet">
 
@@ -36,12 +36,12 @@ $lastMod = date ("F d Y", getlastmod());
     <div class="container">
 
       <header class="page-header">
-        <h1>Password Generator</h1>
+        <h1>Passphrase Generator</h1>
       </header>
       <!-- Bootstrap two-columns, first column right -->
       <div class="row">
 		<div class="content-nav">
-        Placeholder
+        A passphrase made up of a few randomly chosen words from tens of thousands of words can be easier to remember, yet stronger, than a password made up of randomly chosen characters from dozens of characters. <a href="http://xkcd.com/936/">xkcd's comic</a> explains it. Make your own!
 		</div> <!-- /content-nav -->
 		<form action="." method="POST">
 		<fieldset class="content-prose">
@@ -52,17 +52,17 @@ $lastMod = date ("F d Y", getlastmod());
 		</label>
 
         <label>
-        <input type="text" name="qtyWords" id="qtyWords">
+        <input type="text" name="qtyWords" id="qtyWords" value="<?= $wordQty ?>">
         Quantity of words to include
         </label>
 
         <label>
-        <input type="text" name="qtyDigits" id="qtyDigits">
+        <input type="text" name="qtyDigits" id="qtyDigits" value="<?= $digitQty ?>">
         Quantity of numbers to include
         </label>
 
         <label>
-        <input type="text" name="qtySymbols" id="qtySymbols">
+        <input type="text" name="qtySymbols" id="qtySymbols" value="<?= $symbolQty ?>">
         Quantity of symbols to include
         </label>
 
