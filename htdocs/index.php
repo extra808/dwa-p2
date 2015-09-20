@@ -44,7 +44,6 @@ $lastMod = date ("F d Y", getlastmod());
         Placeholder
 		</div> <!-- /content-nav -->
 		<form action="." method="POST">
-		<input type="hidden" name="secrets" value="shhhhhh">
 		<fieldset class="content-prose">
 		<label>Your generated password 
 		<textarea readonly>
@@ -55,6 +54,11 @@ $lastMod = date ("F d Y", getlastmod());
         <label>
         <input type="text" name="qtyWords" id="qtyWords">
         Quantity of words to include
+        </label>
+
+        <label>
+        <input type="text" name="qtyDigits" id="qtyDigits">
+        Quantity of numbers to include
         </label>
 
         <label>

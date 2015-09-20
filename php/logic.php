@@ -27,6 +27,10 @@ $minSymbolQty = 0;
 $maxSymbolQty = 9;
 $symbolQty = $minSymbolQty;
 
+$minDigitQty = 0;
+$maxDigitQty = 9;
+$digitQty = $minDigitQty;
+
 if(isset($_POST['qtyWords'])  && $_POST['qtyWords'] != "") {
     $wordQty = validate_int_range($_POST['qtyWords'], $minWordQty, $maxWordQty);
     }
@@ -35,8 +39,20 @@ if(isset($_POST['qtySymbols']) && $_POST['qtySymbols'] != "") {
     $symbolQty = validate_int_range($_POST['qtySymbols'], $minSymbolQty, $maxSymbolQty);
     }
 
-$passphrase = pass_phrase($wordQty, $symbolQty);
+if(isset($_POST['qtyDigits']) && $_POST['qtyDigits'] != "") {
+    $digitQty = validate_int_range($_POST['qtyDigits'], $minDigitQty, $maxDigitQty);
+    }
 
+
+$passphrase = pass_phrase($wordQty, $symbolQty, $digitQty);
+
+/**
+ * returns random digit
+ *
+ */
+function random_digit() {
+    return  rand(0,9);
+}
 
 /**
  * returns random symbol from given array
@@ -62,7 +78,7 @@ function random_word() {
  * @param Array wordArray   array of strings
  * @param int   wordCount   quantity of words to return
  */
-function pass_phrase($wordCount, $symbolCount) {
+function pass_phrase($wordCount, $symbolCount, $digitCount) {
     $phrase = "";
     for ($i = 0; $i < $wordCount; $i++) {
         // don't add separator to first word
@@ -75,11 +91,22 @@ function pass_phrase($wordCount, $symbolCount) {
             $phrase .= random_symbol();
             $symbolCount--;
             }
+
+        // add digit if all haven't been added
+        if ($digitCount) {
+            $phrase .= random_digit();
+            $digitCount--;
+            }
         }
 
     // append any remaining symbols
     for ($i = 0; $i < $symbolCount; $i++) {
         $phrase .= random_symbol();
+        }
+
+    // append any remaining digits
+    for ($i = 0; $i < $digitCount; $i++) {
+        $phrase .= random_digit();
         }
 
     return $phrase;
