@@ -5,6 +5,7 @@ label, input, textarea {
 textarea {
     font-family: $font-family-monospace;
     width: 100%;
+    resize: none;
 }
 
 // visually indicate invalid field entries
