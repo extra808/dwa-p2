@@ -1,4 +1,7 @@
 <?php
+// time how long page takes
+$before = microtime(true);
+
 // set default character set
 ini_set('default_charset', 'UTF-8');
 
@@ -77,5 +80,7 @@ $lastMod = date ("F d Y", getlastmod());
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script async src="javascripts/ie10-viewport-bug-workaround.js"></script>
+
+<?php echo microtime(true) - $before ."\n<br>". round(memory_get_peak_usage(true)/1048576,2) ."MB"; ?>
   </body>
 </html>
