@@ -7,14 +7,7 @@
  * @logic logic
  */
 
-require_once ("words-no-apostrophes-ascii-only.php");
-
-$words = Array("alice", "bob", "curtis", "x", "apple");
-
-$words = &$wordsNoApostrophesAsciiOnly;
-
-// symbol character list
-$symbols = Array('`', '~', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '-', '+', '=', '{', '}', '[', ']', '\\', '|', ':', ';', '"', '\'', '<', '>', ',', '.', '?', '/');
+$passphrase = "";
 
 $defaultWordQty = 4;
 $minWordQty = 1;
@@ -29,20 +22,33 @@ $minDigitQty = 0;
 $maxDigitQty = 9;
 $digitQty = $minDigitQty;
 
-if(isset($_POST['qtyWords'])  && $_POST['qtyWords'] != "") {
-    $wordQty = validate_int_range($_POST['qtyWords'], $minWordQty, $maxWordQty);
+// generate a passphrase on form submission
+if(isset($_POST['qtyWords']) ) {
+    require_once ("words-no-apostrophes-ascii-only.php");
+
+    $words = Array("alice", "bob", "curtis", "x", "apple");
+
+    $words = &$wordsNoApostrophesAsciiOnly;
+
+    // symbol character list
+    $symbols = Array('`', '~', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '-', '+', '=', '{', '}', '[', ']', '\\', '|', ':', ';', '"', '\'', '<', '>', ',', '.', '?', '/');
+
+    if($_POST['qtyWords'] != "") {
+        $wordQty = validate_int_range($_POST['qtyWords'], $minWordQty, $maxWordQty);
+        }
+
+    if(isset($_POST['qtySymbols']) && $_POST['qtySymbols'] != "") {
+        $symbolQty = validate_int_range($_POST['qtySymbols'], $minSymbolQty, $maxSymbolQty);
+        }
+
+    if(isset($_POST['qtyDigits']) && $_POST['qtyDigits'] != "") {
+        $digitQty = validate_int_range($_POST['qtyDigits'], $minDigitQty, $maxDigitQty);
+        }
+
+    // generate passphrase
+    $passphrase = pass_phrase($wordQty, $symbolQty, $digitQty);
     }
 
-if(isset($_POST['qtySymbols']) && $_POST['qtySymbols'] != "") {
-    $symbolQty = validate_int_range($_POST['qtySymbols'], $minSymbolQty, $maxSymbolQty);
-    }
-
-if(isset($_POST['qtyDigits']) && $_POST['qtyDigits'] != "") {
-    $digitQty = validate_int_range($_POST['qtyDigits'], $minDigitQty, $maxDigitQty);
-    }
-
-
-$passphrase = pass_phrase($wordQty, $symbolQty, $digitQty);
 
 /**
  * returns random digit
