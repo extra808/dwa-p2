@@ -14,3 +14,4 @@
 * [bootstrap-sass](https://github.com/twbs/bootstrap-sass) Official Sass port of Bootstrap 
 * [Bootstrap Navbar Template](http://getbootstrap.com/examples/navbar/) Example of Bootstrap navbar
 * [Autoprefixer](https://github.com/postcss/autoprefixer) Plugin for [PostCSS](https://github.com/postcss/postcss); adds needed browser prefixes, removes old, prefixes no longer needed
+* [symbol character list source](http://windows.microsoft.com/en-us/windows-vista/tips-for-creating-a-strong-password)
