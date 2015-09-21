@@ -43,13 +43,13 @@ $lastMod = date ("F d Y", getlastmod());
 		<div class="content-nav">
         <p>A passphrase made up of a few randomly chosen words from tens of thousands of words can be easier to remember, yet stronger, than a password made up of randomly chosen characters from dozens of characters. <a href="http://xkcd.com/936/">xkcd's comic</a> explains it.</p>
         <p>Make your own!</p>
-		</div> <!-- /content-nav -->
-		<form action="." method="POST">
-		<fieldset class="content-prose">
 		<label>Your generated password 
         <span class="sr-only">text will automatically be selected</span>
 		<textarea id="passphrase" readonly><?php echo hsc($passphrase); ?></textarea>
 		</label>
+		</div> <!-- /content-nav -->
+		<form action="." method="POST">
+		<fieldset class="content-prose">
 
         <div class="content-settings">
         <label>
