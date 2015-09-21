@@ -7,6 +7,17 @@ ini_set('default_charset', 'UTF-8');
 
 require_once ("../php/logic.php");
 
+$contentProse = "";
+$contentPassphrase = "";
+$contentSettings = "";
+
+// change layout to accommodate passphrase
+if($passphrase != "" ) {
+    $contentProse = "content-prose";
+    $contentPassphrase = "content-passphrase";
+    $contentSettings = "content-settings";
+    }
+
 // get last Modified date of this file
 $lastMod = date ("F d Y", getlastmod());
 ?>
@@ -40,16 +51,29 @@ $lastMod = date ("F d Y", getlastmod());
       </header>
       <!-- Bootstrap two-columns, first column right -->
       <div class="row">
-		<div class="content-nav">
+
+		<div class="<?= $contentProse ?>">
         <p>A passphrase made up of a few randomly chosen words from tens of thousands of words can be easier to remember, yet stronger, than a password made up of randomly chosen characters from dozens of characters. <a href="http://xkcd.com/936/">xkcd's comic</a> explains it.</p>
         <p>Make your own!</p>
-		<label>Your generated password 
-        <span class="sr-only">text will automatically be selected</span>
+		</div> <!-- /content-prose -->
+
+<?php // don't include passphrase field until one is generated
+if($passphrase != "" ) { ?>
+        <div class="content-passphrase">
+        <label>Your generated password 
+        <span class="sr-only">text will automatically be selected on click</span>
 		<textarea id="passphrase" readonly><?php echo hsc($passphrase); ?></textarea>
 		</label>
-		</div> <!-- /content-nav -->
+        </div> <!-- /content-passphrase -->
+<?php   } ?>
+      </div>
+
 		<form action="." method="POST">
-		<fieldset class="content-prose">
+
+        <input type="submit" value="Generate Password" class="btn" />
+
+		<fieldset class="<?= $contentSettings ?>">
+		<legend>Settings</legend>
 
         <div class="content-settings">
         <label>
@@ -68,11 +92,8 @@ $lastMod = date ("F d Y", getlastmod());
         </label>
         
         </div>
-
-        <input type="submit" value="Generate Password" class="btn" />
-		</fieldset> <!-- /content-prose -->
+		</fieldset> <!-- /content-settings -->
 		</form>
-      </div>
 
 	<footer class="well well-sm text-right">&copy; Curtis Wilcox <?php echo $lastMod; ?>
 	</footer>
