@@ -50,6 +50,7 @@ $lastMod = date ("F d Y", getlastmod());
 		<textarea id="passphrase" readonly><?php echo hsc($passphrase); ?></textarea>
 		</label>
 
+        <div class="content-settings">
         <label>
         # of words
         <input type="number" min="1" max="9" step="1" pattern="\d+" name="qtyWords" id="qtyWords" value="<?= $wordQty ?>" required>
@@ -64,6 +65,8 @@ $lastMod = date ("F d Y", getlastmod());
         # of symbols
         <input type="number" min="0" max="9" step="1" pattern="\d+" name="qtySymbols" id="qtySymbols" value="<?= $symbolQty ?>">
         </label>
+        
+        </div>
 
         <input type="submit" value="Generate Password" />
 		</fieldset> <!-- /content-prose -->
@@ -86,6 +89,6 @@ $lastMod = date ("F d Y", getlastmod());
 
     <script async src="javascripts/select-all-on-click.js"></script>
 
-<?php echo microtime(true) - $before ."\n<br>". round(memory_get_peak_usage(true)/1048576,2) ."MB"; ?>
+<!-- <?php echo microtime(true) - $before ."\n<br>". round(memory_get_peak_usage(true)/1048576,2) ."MB"; ?> -->
   </body>
 </html>
