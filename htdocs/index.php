@@ -53,17 +53,17 @@ $lastMod = date ("F d Y", getlastmod());
         <div class="content-settings">
         <label>
         # of words
-        <input type="number" min="1" max="9" step="1" pattern="\d+" name="qtyWords" id="qtyWords" value="<?= $wordQty ?>" required>
+        <input type="number" min="1" max="9" step="1" name="qtyWords" id="qtyWords" value="<?= $wordQty ?>" required>
         </label>
 
         <label>
         # of numbers
-        <input type="number" min="0" max="9" step="1" pattern="\d+" name="qtyDigits" id="qtyDigits" value="<?= $digitQty ?>">
+        <input type="number" min="0" max="9" step="1" name="qtyDigits" id="qtyDigits" value="<?= $digitQty ?>">
         </label>
 
         <label>
         # of symbols
-        <input type="number" min="0" max="9" step="1" pattern="\d+" name="qtySymbols" id="qtySymbols" value="<?= $symbolQty ?>">
+        <input type="number" min="0" max="9" step="1" name="qtySymbols" id="qtySymbols" value="<?= $symbolQty ?>">
         </label>
         
         </div>
