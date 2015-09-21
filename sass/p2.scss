@@ -9,12 +9,12 @@
 // visually indicate invalid field entries
 @import "form-validation";
 
-.content-nav {
+.content-prose {
 	@extend .col-md-4;
 	@extend .col-md-push-8;
 	}
 
-.content-prose {
+.content-passphrase {
 	@extend .col-md-8;
 	@extend .col-md-pull-4;
 	}
