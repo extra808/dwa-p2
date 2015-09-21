@@ -49,6 +49,7 @@ $lastMod = date ("F d Y", getlastmod());
       <header class="page-header">
         <h1>Passphrase Generator</h1>
       </header>
+		<form action="." method="POST">
       <!-- Bootstrap two-columns, first column right -->
       <div class="row">
 
@@ -57,21 +58,19 @@ $lastMod = date ("F d Y", getlastmod());
         <p>Make your own!</p>
 		</div> <!-- /content-prose -->
 
+        <div class="<?= $contentPassphrase ?>">
+
 <?php // don't include passphrase field until one is generated
 if($passphrase != "" ) { ?>
-        <div class="content-passphrase">
         <label>Your generated password 
         <span class="sr-only">text will automatically be selected on click</span>
 		<textarea id="passphrase" readonly><?php echo hsc($passphrase); ?></textarea>
 		</label>
-        </div> <!-- /content-passphrase -->
 <?php   } ?>
-      </div>
-
-		<form action="." method="POST">
 
         <input type="submit" value="Generate Password" class="btn" />
-
+        </div> <!-- /content-passphrase -->
+      </div>
 		<fieldset class="<?= $contentSettings ?>">
 		<legend>Settings</legend>
 
