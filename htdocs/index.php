@@ -41,7 +41,8 @@ $lastMod = date ("F d Y", getlastmod());
       <!-- Bootstrap two-columns, first column right -->
       <div class="row">
 		<div class="content-nav">
-        A passphrase made up of a few randomly chosen words from tens of thousands of words can be easier to remember, yet stronger, than a password made up of randomly chosen characters from dozens of characters. <a href="http://xkcd.com/936/">xkcd's comic</a> explains it. Make your own!
+        <p>A passphrase made up of a few randomly chosen words from tens of thousands of words can be easier to remember, yet stronger, than a password made up of randomly chosen characters from dozens of characters. <a href="http://xkcd.com/936/">xkcd's comic</a> explains it.</p>
+        <p>Make your own!</p>
 		</div> <!-- /content-nav -->
 		<form action="." method="POST">
 		<fieldset class="content-prose">
@@ -68,7 +69,7 @@ $lastMod = date ("F d Y", getlastmod());
         
         </div>
 
-        <input type="submit" value="Generate Password" />
+        <input type="submit" value="Generate Password" class="btn" />
 		</fieldset> <!-- /content-prose -->
 		</form>
       </div>
