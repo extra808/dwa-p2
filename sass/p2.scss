@@ -18,3 +18,11 @@
 	@extend .col-md-8;
 	@extend .col-md-pull-4;
 	}
+
+.content-settings {
+	display: table;
+
+    input, label {
+        display: table-cell;
+        }
+	}
