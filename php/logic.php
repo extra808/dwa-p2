@@ -64,7 +64,7 @@ function random_digit() {
  */
 function random_symbol() {
     global $symbols;
-    return $symbols[array_rand($symbols, 1)];
+    return $symbols[rand(0,count($symbols)-1 )];
 }
 
 /**
@@ -73,7 +73,7 @@ function random_symbol() {
  */
 function random_word() {
     global $words;
-    return $words[array_rand($words, 1)];
+    return $words[rand(0,count($words)-1 )];
 }
 
 /**
