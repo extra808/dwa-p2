@@ -151,4 +151,3 @@ function validate_int_range($input, $min, $max) {
 function hsc($hscString) {
     return htmlspecialchars($hscString, ENT_HTML5);
 }
-?>
