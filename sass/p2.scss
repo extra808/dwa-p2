@@ -20,6 +20,10 @@
     }
 }
 
+.content-prose-1col {
+	@extend .col-md-12;
+	}
+
 .content-prose {
 	@extend .col-md-4;
 	@extend .col-md-push-8;
