@@ -72,7 +72,7 @@ if($passphrase != "" ) { ?>
         </div> <!-- /content-passphrase -->
       </div>
 		<fieldset class="content-settings">
-		<legend>Settings</legend>
+		<legend class="sr-only">Settings</legend>
 
         <label>
         # of words
