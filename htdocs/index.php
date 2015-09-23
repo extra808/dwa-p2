@@ -1,7 +1,4 @@
 <?php
-// time how long page takes
-$before = microtime(true);
-
 // set default character set
 ini_set('default_charset', 'UTF-8');
 
@@ -106,6 +103,5 @@ if($passphrase != "" ) { ?>
 
     <script async src="javascripts/select-all-on-click.js"></script>
 
-<!-- <?php echo microtime(true) - $before ."\n<br>". round(memory_get_peak_usage(true)/1048576,2) ."MB"; ?> -->
   </body>
 </html>
