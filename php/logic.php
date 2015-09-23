@@ -117,10 +117,11 @@ function pass_phrase($wordCount, $symbolCount, $digitCount) {
 }
 
 /**
- * returns random words from given array
+ * ensure input is within allowed range
  *
- * @param Array wordArray   array of strings
- * @param int   wordCount   quantity of words to return
+ * @param int   input   submitted value
+ * @param int   min     minimum allowed
+ * @param int   max     maximum allowed
  */
 function validate_int_range($input, $min, $max) {
     // cast input as int
