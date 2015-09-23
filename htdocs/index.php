@@ -74,7 +74,6 @@ if($passphrase != "" ) { ?>
 		<fieldset class="<?= $contentSettings ?>">
 		<legend>Settings</legend>
 
-        <div class="content-settings">
         <label>
         # of words
         <input type="number" min="1" max="9" step="1" name="qtyWords" id="qtyWords" value="<?= $wordQty ?>" required>
@@ -90,7 +89,6 @@ if($passphrase != "" ) { ?>
         <input type="number" min="0" max="9" step="1" name="qtySymbols" id="qtySymbols" value="<?= $symbolQty ?>">
         </label>
         
-        </div>
 		</fieldset> <!-- /content-settings -->
 		</form>
 
