@@ -49,7 +49,7 @@ $lastMod = date ("F d Y", getlastmod());
       <header class="page-header">
         <h1>Passphrase Generator</h1>
       </header>
-		<form action="." method="POST">
+    <form action="." method="POST">
       <!-- Bootstrap two-columns, first column right -->
       <div class="row">
 
@@ -70,8 +70,8 @@ if($passphrase != "" ) { ?>
 
         <input type="submit" value="Generate Password" class="btn btn-success" />
         </div> <!-- /content-passphrase -->
-      </div>
-		<fieldset class="content-settings">
+      </div> <!-- /row -->
+      <fieldset class="content-settings">
 		<legend class="sr-only">Settings</legend>
 
         <label>
@@ -89,8 +89,8 @@ if($passphrase != "" ) { ?>
         <input type="number" min="0" max="9" step="1" name="qtySymbols" id="qtySymbols" value="<?= $symbolQty ?>">
         </label>
         
-		</fieldset> <!-- /content-settings -->
-		</form>
+      </fieldset> <!-- /content-settings -->
+    </form>
 
 	<footer class="well well-sm text-right">&copy; Curtis Wilcox <?php echo $lastMod; ?>
 	</footer>
