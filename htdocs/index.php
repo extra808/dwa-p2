@@ -68,7 +68,7 @@ if($passphrase != "" ) { ?>
 		</label>
 <?php   } ?>
 
-        <input type="submit" value="Generate Password" class="btn" />
+        <input type="submit" value="Generate Password" class="btn btn-success" />
         </div> <!-- /content-passphrase -->
       </div>
 		<fieldset class="content-settings">
