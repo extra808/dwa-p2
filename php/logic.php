@@ -100,7 +100,7 @@ function pass_phrase($wordCount, $symbolCount, $digitCount) {
         $symbolCount--;
         $digitCount--;
         // don't add separator to last word, add separator if no more symbols or digits
-        if ($i < $wordCount && $symbolCount < 0 && $digitCount < 0)
+        if ($i < $wordCount -1 && $symbolCount < 0 && $digitCount < 0)
             $phrase .= "-";
         }
 
