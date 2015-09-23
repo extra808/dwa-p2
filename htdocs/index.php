@@ -7,15 +7,13 @@ ini_set('default_charset', 'UTF-8');
 
 require_once ("../php/logic.php");
 
-$contentProse = "";
+$contentProse = "content-prose-1col";
 $contentPassphrase = "";
-$contentSettings = "";
 
 // change layout to accommodate passphrase
 if($passphrase != "" ) {
     $contentProse = "content-prose";
     $contentPassphrase = "content-passphrase";
-    $contentSettings = "content-settings";
     }
 
 // get last Modified date of this file
