@@ -85,32 +85,23 @@ function random_word() {
 function pass_phrase($wordCount, $symbolCount, $digitCount) {
     $phrase = "";
     for ($i = 0; $i < $wordCount; $i++) {
-        // don't add separator to first word
-        if ($i != 0) $phrase .= "-";
-        
         $phrase .= random_word();
         
         // add symbol if all haven't been added
-        if ($symbolCount) {
+        if ($symbolCount > 0) {
             $phrase .= random_symbol();
-            $symbolCount--;
             }
 
         // add digit if all haven't been added
-        if ($digitCount) {
+        if ($digitCount > 0) {
             $phrase .= random_digit();
-            $digitCount--;
             }
-        }
 
-    // append any remaining symbols
-    for ($i = 0; $i < $symbolCount; $i++) {
-        $phrase .= random_symbol();
-        }
-
-    // append any remaining digits
-    for ($i = 0; $i < $digitCount; $i++) {
-        $phrase .= random_digit();
+        $symbolCount--;
+        $digitCount--;
+        // don't add separator to last word, add separator if no more symbols or digits
+        if ($i < $wordCount && $symbolCount < 0 && $digitCount < 0)
+            $phrase .= "-";
         }
 
     return $phrase;
