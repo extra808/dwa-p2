@@ -10,6 +10,11 @@
 @import "form-validation";
 
 .page-header {
+    @extend .well;
+    @extend .well-sm;
+    
+    margin-top: 5px;
+    // make smaller
     h1 {
         font-size: $font-size-h3;
     }
