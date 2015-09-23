@@ -6,8 +6,18 @@
 // custom version of optional class, not sure where in import order this should go
 @import "customTheme";
 
+$container-bg:       #AAC9AA;
+
 // visually indicate invalid field entries
 @import "form-validation";
+
+.container {
+    background-color: $container-bg;
+    }
+
+.well {
+    color: white;
+    }
 
 .page-header {
     @extend .well;
