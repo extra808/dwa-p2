@@ -9,6 +9,12 @@
 // visually indicate invalid field entries
 @import "form-validation";
 
+.page-header {
+    h1 {
+        font-size: $font-size-h3;
+    }
+}
+
 .content-prose {
 	@extend .col-md-4;
 	@extend .col-md-push-8;
