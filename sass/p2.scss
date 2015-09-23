@@ -11,6 +11,10 @@ $container-bg:       #AAC9AA;
 // visually indicate invalid field entries
 @import "form-validation";
 
+footer {
+    clear: both;
+    }
+
 .container {
     background-color: $container-bg;
     }
