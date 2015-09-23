@@ -39,17 +39,3 @@
         display: table-cell;
         }
 	}
-
-
-#basicModal {
-	@extend .modal;
-	@extend .fade;
-    }
-
-@media (min-width: $screen-sm-max + 1) {
-
-	}
-
-@media (max-width: $screen-sm-max) {
-
-	}
