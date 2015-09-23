@@ -58,7 +58,7 @@ $lastMod = date ("F d Y", getlastmod());
         <p>Make your own!</p>
 		</div> <!-- /content-prose -->
 
-        <div class="<?= $contentPassphrase ?>">
+        <div class="text-center <?= $contentPassphrase ?>">
 
 <?php // don't include passphrase field until one is generated
 if($passphrase != "" ) { ?>
