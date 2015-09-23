@@ -20,9 +20,25 @@
 	}
 
 .content-settings {
-	display: table;
+    @extend .row;
+    @extend .col-md-8;
 
-    input, label {
+    label {
+        @extend .col-xs-4;
         display: table-cell;
         }
+	}
+
+
+#basicModal {
+	@extend .modal;
+	@extend .fade;
+    }
+
+@media (min-width: $screen-sm-max + 1) {
+
+	}
+
+@media (max-width: $screen-sm-max) {
+
 	}
