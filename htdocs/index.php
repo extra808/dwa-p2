@@ -71,7 +71,7 @@ if($passphrase != "" ) { ?>
         <input type="submit" value="Generate Password" class="btn" />
         </div> <!-- /content-passphrase -->
       </div>
-		<fieldset class="<?= $contentSettings ?>">
+		<fieldset class="content-settings">
 		<legend>Settings</legend>
 
         <label>
