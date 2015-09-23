@@ -15,11 +15,11 @@ $maxWordQty = 9;
 $wordQty = $defaultWordQty;
 
 $minSymbolQty = 0;
-$maxSymbolQty = 9;
+$maxSymbolQty = $maxWordQty;
 $symbolQty = $minSymbolQty;
 
 $minDigitQty = 0;
-$maxDigitQty = 9;
+$maxDigitQty = $maxWordQty;
 $digitQty = $minDigitQty;
 
 // generate a passphrase on form submission
@@ -38,11 +38,11 @@ if(isset($_POST['qtyWords']) ) {
         }
 
     if(isset($_POST['qtySymbols']) && $_POST['qtySymbols'] != "") {
-        $symbolQty = validate_int_range($_POST['qtySymbols'], $minSymbolQty, $maxSymbolQty);
+        $symbolQty = validate_int_range($_POST['qtySymbols'], $minSymbolQty, $wordQty);
         }
 
     if(isset($_POST['qtyDigits']) && $_POST['qtyDigits'] != "") {
-        $digitQty = validate_int_range($_POST['qtyDigits'], $minDigitQty, $maxDigitQty);
+        $digitQty = validate_int_range($_POST['qtyDigits'], $minDigitQty, $wordQty);
         }
 
     // generate passphrase
