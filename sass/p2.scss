@@ -47,6 +47,7 @@ $container-bg:       #AAC9AA;
 .content-settings {
     @extend .row;
     @extend .col-md-8;
+    margin-top: 5px;
 
     label {
         @extend .col-xs-4;
