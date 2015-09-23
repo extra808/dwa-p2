@@ -24,11 +24,7 @@ $digitQty = $minDigitQty;
 
 // generate a passphrase on form submission
 if(isset($_POST['qtyWords']) ) {
-    require_once ("words-no-apostrophes-ascii-only.php");
-
-    $words = Array("alice", "bob", "curtis", "x", "apple");
-
-    $words = &$wordsNoApostrophesAsciiOnly;
+    $words = explode(PHP_EOL, file_get_contents('../misc/words-no-apostrophes-ascii-only-all-lower-no-dups') );
 
     // symbol character list
     $symbols = Array('`', '~', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '-', '+', '=', '{', '}', '[', ']', '\\', '|', ':', ';', '"', '\'', '<', '>', ',', '.', '?', '/');
