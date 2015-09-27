@@ -7,7 +7,7 @@
 a site to generate passphrases using randomly chosen words with optional numbers and symbols.
 
 ## Demo
-<https://youtu.be/I5Yv7VKzEjA>
+<https://youtu.be/L3Vzt-KAjcE>
 
 ## Details for teaching team
 * Site configured to use self-signed certificate. HTTP access still allowed.
